@@ -1,0 +1,29 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.el-header {
+  background-color: white;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  padding: 0 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.el-menu {
+  line-height: 64px;
+}
+
+.el-menu-item {
+  font-weight: 600;
+}
+
+.el-menu-item.is-active {
+  color: #409eff;
+}
+
+button {
+  cursor: pointer;
+}
