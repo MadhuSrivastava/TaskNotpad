@@ -1,0 +1,111 @@
+/* auth.css */
+
+/* Container with animated gradient background */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(-45deg, #e3f2fd, #fce4ec, #e0f7fa, #ede7f6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Card holding the form */
+.auth-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* Card Title Styling */
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+/* Form layout — vertical stack */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form inputs */
+.auth-form input {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus state */
+.auth-form input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+  outline: none;
+}
+
+/* Submit button */
+.auth-form button {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Disabled button state */
+.auth-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hover effect on enabled button */
+.auth-form button:hover:not(:disabled) {
+  background-color: #005fcc;
+}
+
+/* Error message styling */
+.error-msg {
+  margin-top: 1rem;
+  color: #e63946;
+  text-align: center;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+  
+  .auth-form input,
+  .auth-form button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Keyframes for smooth gradient background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
